@@ -20,13 +20,13 @@ std::set<std::string> parseStringToWords(string rawWords)
 	std::string::iterator it;
 	for(it = rawWords.begin(); it != rawWords.end(); it++){
 		if((*it > 65) && (*it < 91)){
-			std::temp.push_back(*it);
+			temp.push_back(*it);
 		}
 		else{
-			if(std::temp.size() > 1){
-				std::words.insert(temp);
+			if(temp.size() > 1){
+				words.insert(temp);
 			}
-			std::temp.clear();
+			temp.clear();
 		}
 	}
 	return words;
